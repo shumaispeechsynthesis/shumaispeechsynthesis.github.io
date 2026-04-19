@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shumaispeechsynthesis - Official Page</title>
+    <style>
+        :root { --main-color: #333; --accent-color: #007bff; --bg-color: #ffffff; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 40px 20px; background: #f8f9fa; }
+        .hero { text-align: center; padding: 60px 0; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 40px; }
+        h1 { font-size: 2.5em; margin: 0; color: var(--main-color); letter-spacing: -1px; }
+        .version { font-family: monospace; color: var(--accent-color); font-weight: bold; }
+        .card { background: white; padding: 30px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        h2 { border-left: 5px solid var(--accent-color); padding-left: 15px; margin-bottom: 20px; font-size: 1.5em; }
+        pre { background: #282c34; color: #abb2bf; padding: 20px; border-radius: 8px; overflow-x: auto; position: relative; }
+        code { font-family: 'Consolas', 'Monaco', monospace; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .feature-item { padding: 15px; border: 1px solid #eee; border-radius: 10px; }
+        .footer { text-align: center; margin-top: 60px; color: #888; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>shumaispeechsynthesis</h1>
+    <p class="version">v0.1.0 (Stable)</p>
+    <p>Python向けの超軽量・独立型音声合成エンジン</p>
+</div>
+
+<div class="card">
+    <h2>概要</h2>
+    <p>
+        <code>shumaispeechsynthesis</code> は、特定の環境に依存せず、ネットワーク接続も不要な音声合成ライブラリです。<br>
+        あらかじめ録音された高品質な音声データを連結する方式を採用しており、低スペックなハードウェアでもリアルタイムに近いレスポンスを実現します。
+    </p>
+</div>
+
+<div class="card">
+    <h2>特徴</h2>
+    <div class="feature-grid">
+        <div class="feature-item">
+            <strong>📁 超軽量設計</strong><br>
+            ライブラリ全体で約500KB。ディスク容量を圧迫せず、配布も容易です。
+        </div>
+        <div class="feature-item">
+            <strong>🔌 完全オフライン</strong><br>
+            外部APIを使用しないため、インターネット環境がない場所（オフライン環境）でも動作します。
+        </div>
+        <div class="feature-item">
+            <strong>🤖 Raspberry Pi 最適化</strong><br>
+            CPU負荷が非常に低く、シングルボードコンピュータでのAIスピーカー開発等に最適です。
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>インストール</h2>
+    <p>pipを使用してGitHubリポジトリから直接インストールできます。</p>
+    <pre><code>pip install git+https://github.com/shumaistudio/shumaispeechsynthesis.git</code></pre>
+</div>
+
+<div class="card">
+    <h2>クイックスタート</h2>
+    <pre><code>import shumaispeechsynthesis as ss
+
+# 漢字・ひらがな混じりのテキストを読み上げます
+ss.speechsynthesis("こんにちは。今日はいい天気ですね。")</code></pre>
+</div>
+
+<div class="footer">
+    Developed by shumai studio / Hosted on GitHub Pages
+</div>
+
+</body>
+</html>
